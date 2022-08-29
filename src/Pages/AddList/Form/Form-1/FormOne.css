@@ -1,0 +1,139 @@
+.form-1-main {
+    background-color: #F7F7F7;
+    height: fit-content;
+    margin-bottom: 30px;
+}
+.form-page-1 {
+    background-color: #FFFFFF;
+    margin: 0 200px;
+    border-radius: 10px;
+    padding: 60px 75px 80px 75px;
+}
+.full-name {
+    display: flex;
+    justify-content: space-between;
+}
+.form-pages {
+    padding: 40px 400px 20px 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F7F7F7;
+}
+.form {
+    padding-bottom: 5px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;  
+    color: #232323;
+}
+
+.border-bottom {
+    border-bottom: 2px solid black;
+}
+label {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    padding: 5px 0;
+}
+.input {
+    box-sizing: border-box;
+    width: 387px;
+    height: 45px;
+    border: 2px solid #8AC0E2;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    padding-left: 10px;
+    font-size: 12pt;
+    outline: none;
+}
+.input:focus {
+    background: rgba(43, 75, 242, 0.06);
+    border: 1.8px solid #6499FF;
+}
+.long {
+    width: 100%;
+}
+.small {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: gray;
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    padding: 3px 0;
+}
+.small-red {
+    color: #E52F2F;
+}
+.label-red {
+    color: #E52F2F;
+}
+.input-red {
+    border: 2px solid #E52F2F;
+}
+.input-focus {
+    border: 2px solid blue;
+}
+.btns {
+    width: 125px;
+    height: 50px;
+    background: #62A1EB;
+    border-radius: 8px;
+    float: right;
+    border: none;
+    font-family: sans-serif;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+.btns-red {
+    background-color: #E52F2F;
+}
+.select-div {
+    width: 100%;
+    margin: 50px 0;
+}
+.select {
+    width: 100%;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0 25px;
+    margin: 25px 0;
+    font-size: 18px;
+    font-family: sans-serif;
+    -webkit-appearance: none;
+    background: #EBEBEB url('../../../../assets/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 25px);
+    background-position-y: 25px;
+}
+.phone-number {
+    margin: 30px 0;
+}
+.sub-res-btns {
+    padding: 20px;
+}
