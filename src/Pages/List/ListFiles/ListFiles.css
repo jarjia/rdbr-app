@@ -1,0 +1,145 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(../../../assets/HelveticaNeue.ttc);
+}
+.list-wrapper {
+    padding: 50px 150px;
+}
+.list-wrapper h1 {
+    text-align: center;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 21px;
+    color: #000000;
+    position: relative;
+    left: 20px;
+}
+.header {
+    display: flex;
+}
+.header div:nth-child(2) {
+    align-self: center;
+    width: 100%;
+}
+.arrow-left-list {
+    position: relative;
+    top: 2px;
+}
+.back-btn-list {
+    padding: 12px 15px;
+    border-radius: 50px;
+    border: none;
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+.back-btn-list:hover {
+    background-color: #d9d9d9c4;
+}
+.lists {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 45px;
+    padding: 100px 0 50px 0;
+}
+.list {
+    padding: 10px;
+    background: #EAFAFF;
+    border: 1px solid #AED1EA;
+    border-radius: 20px;
+    display: flex;
+    height: 10em;
+}
+.list .list-img img {
+    border-radius: 10px;
+    width: 95%;
+    height: 100%;
+    background-color: transparent;
+}
+.list .short-info  {
+    padding: 20px;
+}
+.list .short-info .user {
+    padding-bottom: 20px;
+}
+.back-btn-arr {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.list .short-info > h4 {
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2E2E2E;
+}
+.short-info div {
+    padding-top: 50px;
+}
+.short-info div a {
+    color: #4386A9;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.empty-div h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #2E2E2E;
+}
+.empty-div {
+    position: absolute;
+    top: 35%;
+    left: 36%;
+}
+
+@media only screen and (max-width: 425px) {
+    .list-wrapper {
+        padding: 50px 15px;
+    }
+    .list-wrapper h1 {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .lists {
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+    .list {
+        padding: 10px;
+        height: 7em;
+    }
+    .list .list-img {
+        width: 50%;
+    }
+    .list .short-info  {
+        padding: 10px 20px;
+        align-self: center;
+    }
+    .list .short-info .user {
+        padding-bottom: 10px;
+    }
+    .list .short-info > h4 {
+        font-size: 16px;
+    }
+    .short-info div {
+        padding-top: 10px;
+    }
+    .short-info div a {
+        font-size: 16px;
+    }
+    .back-btn-list {
+        padding: 10px 15px;
+        background-color: transparent;
+    }
+    .empty-div {
+        position: absolute;
+        top: 20%;
+        left: 11%;
+    }
+}

@@ -10,7 +10,7 @@ const INITIAL_VALUES = {
     team_id: '',
     position_id: '',
     email: '',
-    phone_number: ''
+    phone_number: '+995'
 };
 const LOCAL_STORAGE_KEY = 'customLocalStorageKey';
 
@@ -30,18 +30,18 @@ const validate = Yup.object({
       .required('გთხოვთ შეავსოთ'),
     position_id: Yup.string()
       .required('აუცილებელია'),
-    team_id: Yup.string()
-      .required('აუცილებელია'),
     email: Yup.string()
       .email('მეილი არასწორია')
       .matches('@redberry.ge', 'უნდა მთავრდებოდეს @redberry.ge-ით')
       .required('გთხოვთ მიუთითოთ მეილი'),
+    team_id: Yup.string()
+      .required('აუცილებელია'),
     phone_number: Yup.string()
         .matches(georgianPhoneRegex, 'უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს')
         .required('გთხოვთ შეავსოთ')
 })
 
-const MyForm = ({errors, touched, saveForm, ...props }) => {
+const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
     const [teams, setTeams] = useState([])
     const [positions, setPositions] = useState([])
 
@@ -84,10 +84,8 @@ const MyForm = ({errors, touched, saveForm, ...props }) => {
             </div>
         </div>
         <div className='select-div'>
-            <Field as="select" name="team_id" className='select' style={{
-                border: errors.team_id && touched.team_id && '2px solid #E52F2F'
-            }}>
-                <option value="">თიმი</option>
+            <Field as='select' name='team_id' className='select'>
+                <option value=''>თიმი</option>
                 {teams.map(item => {
                     return <option key={item.id} value={item.id}>{item.name}</option>
                 })}
@@ -129,15 +127,18 @@ const MyForm = ({errors, touched, saveForm, ...props }) => {
             </small>
         </div>
         <div className='sub-res-btns'>
-            <button className='btns' type='submit'>შემდეგი</button>
-            <button className='btns btns-red' type='reset' onClick={handleReset}>წაშლა</button>
+            <div>
+                <button className='btns' type='submit'>შემდეგი</button>
+                <button className='btns btns-red' type='reset' onClick={handleReset}>წაშლა</button>
+                <button className='button-back' onClick={handleStepBack}>უკან</button>
+            </div>
         </div>
      </Form>
     );
 };
 
 
-const FormOne = ({handleData, handleStepNext}) => {
+const FormOne = ({handleStepBack, handleData, handleStepNext}) => {
     const [initialValues, handleUpdateForm] = useLocalStorageState({ key: LOCAL_STORAGE_KEY, value: INITIAL_VALUES });
 
     const handleSubmit = (values) => {
@@ -156,7 +157,13 @@ const FormOne = ({handleData, handleStepNext}) => {
             validationSchema={validate}
             onSubmit={handleSubmit}
         >
-        {(props, errors, touched) =>  <MyForm errors={errors} touched={touched} saveForm={handleUpdateForm} {...props} />}
+        {(props, errors, touched) =>  <MyForm 
+            handleStepBack={handleStepBack} 
+            errors={errors} 
+            touched={touched} 
+            saveForm={handleUpdateForm} 
+            {...props} 
+        />}
         </Formik>
     </div>
   )

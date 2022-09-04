@@ -1,0 +1,75 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(../../../../assets/HelveticaNeue.ttc);
+}
+.finish-main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.finish-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    gap: 40px;
+}
+.finish-1 {
+    display: flex;
+    flex-direction: column;
+}
+.finish-1 h2 {
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+    color: #292929;
+    letter-spacing: 1px;
+}
+.finish-1 img {
+    width: 250px;
+    height: 280px;
+    position: relative;
+    align-self: center;
+}
+.finish-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.finish-2 .see-list {
+    border: none;
+    background-color: #62A1EB;
+    color: white;
+    width: 297px;
+    height: 60px;
+    border-radius: 8px;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.home-link {
+    align-self: center;
+    font-family: HelveticaNeue;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #0089A7;
+}
+
+@media only screen and (max-width: 425px) {
+    .finish-wrapper {
+        align-self: center;
+    }
+    .finish-2 {
+        padding-top: 100px;
+    }
+}

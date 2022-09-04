@@ -1,5 +1,36 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(../../../assets/HelveticaNeue.ttc);
+}
 .Form-main {
     background-color: #F7F7F7;
+}
+.form-pages div {
+    width: 100%;
+}
+.number-page {
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: black;
+}
+.form-pages-step-1 {
+    display: flex;
+}
+.form-pages-step-2 {
+    display: none;
+}
+.form-pages div div button {
+    float: left;
+    position: relative;
+    left: 20px;
+    top: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 .back-btn {
     position: absolute;
@@ -20,4 +51,15 @@
 .rdbr-logo {
     width: 100%;
     text-align: center;
+}
+@media only screen and (max-width: 425px) {
+    .back-btn {
+        display: none;
+    }
+    .form-pages-step-1 {
+        display: none;
+    }
+    .form-pages-step-2 {
+        display: block;
+    }
 }

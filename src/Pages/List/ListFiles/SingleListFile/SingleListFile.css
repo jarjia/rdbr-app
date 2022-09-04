@@ -1,0 +1,180 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(../../../../assets/HelveticaNeue.ttc);
+}
+.single-wrapper {
+    padding: 50px 150px 30px 150px;
+}
+.single-wrapper h1 {
+    text-align: center;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 21px;
+    color: #000000;
+    position: relative;
+    left: 20px;
+}
+.single-laptop {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 80px 80px 10px 80px;
+}
+.single-1 {
+    display: flex;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #A5A5A5;
+}
+.laptop-img {
+    width: 55%;
+    height: auto;
+}
+.single-1 .laptop-img img {
+    width: 100%;
+    height: 100%;
+}
+.single-1 .user-info {
+    padding: 5px 40px;
+    width: 45%;
+}
+.single-1 div:nth-child(2) > div {
+    display: flex;
+    padding: 15px 0;
+}
+.single-1 div:nth-child(2) > div span {
+    width: 50%;
+    text-align: left;
+    font-family: HelveticaNeue;
+    font-weight: 400;
+    line-height: 27px;
+    color: #797979;
+}
+.single-1 div:nth-child(2) > div h4 {
+    width: 50%;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    color: #2E2E2E;
+}
+.single-2 {
+    display: flex;
+    padding: 40px 0;
+    border-bottom: 1px solid #A5A5A5;
+}
+.single-2-1 {
+    width: 50%;
+}
+.single-2-2 {
+    width: 50%;
+}
+
+.single-2 > div > div{
+    display: flex;
+    padding: 15px 0;
+}
+
+.single-2 > div > div span {
+    width: 50%;
+    text-align: left;
+    font-family: HelveticaNeue;
+    font-weight: 400;
+    line-height: 27px;
+    color: #797979;
+}
+.single-2 > div > div h4 {
+    width: 50%;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    color: #2E2E2E;
+}
+.single-3 {
+    display: flex;
+    padding-top: 40px;
+}
+.single-3-1 {
+    width: 50%;
+}
+.single-3-2 {
+    width: 50%;
+}
+.single-3 > div > div{
+    display: flex;
+    padding: 15px 0;
+}
+.single-3 > div > div span {
+    width: 50%;
+    text-align: left;
+    font-family: HelveticaNeue;
+    font-weight: 400;
+    line-height: 27px;
+    color: #797979;
+}
+.single-3 > div > div h4 {
+    width: 50%;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    color: #2E2E2E;
+}
+@media only screen and (max-width: 425px) {
+    .single-wrapper {
+        padding: 50px 15px 10px 15px;
+    }
+    .single-wrapper h1 {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .single-laptop {
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 70px 10px 20px 10px;
+    }
+    .single-1 {
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+    .laptop-img {
+        width: 100%;
+    }
+    .single-1 .user-info {
+        padding: 15px 0 0 0;
+        width: 100%;
+    }
+    .single-1 div:nth-child(2) > div {
+        padding: 2px 0;
+    }
+    .single-2 {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .single-2-1 {
+        width: 100%;
+    }
+    .single-2-2 {
+        width: 100%;
+    }
+    
+    .single-2 > div > div{
+        display: flex;
+        padding: 2px 0;
+    }
+    .single-3 {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .single-3-1 {
+        width: 100%;
+    }
+    .single-3-2 {
+        width: 100%;
+    }
+    .single-3 > div > div{
+        padding: 2px 0;
+    }
+}

@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(../../assets/HelveticaNeue.ttc);
+}
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+}
+.wrapper {
+    margin: 0 350px;
+    padding: 0 0;
+    text-align: center;
+}
+.rdbr-logo {
+    padding: 5px 0 40px 0;
+}
+.rdbr-logo-img {
+    width: 90px;
+    height: 15px;
+}
+.group-div-img img:nth-child(2) {
+    display: none;
+    margin: auto;
+}
+.group-img {
+    width: 500px; 
+    height: 300px;
+}
+.btn-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 60px;
+    gap: 20px;
+}
+.btn {
+    width: 350px;
+    height: 45px;
+    background: #62A1EB;
+    border-radius: 8px;
+    border: none;
+    font-family: HelveticaNeue;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 425px) {
+    .wrapper {
+        margin: 0;
+        padding: 0 0 0 0;
+        width: 100%;
+        align-self: center;
+    }
+    .main {
+        width: 100%;
+        height: 100vh;
+        padding: 0 0;
+        display: flex;
+    }
+    .rdbr-logo {
+        padding: 0 0 30px 0;
+        text-align: center;
+        margin: 0 0 0 0;
+    }
+    .group-img {
+        width: 300px; 
+        height: 200px;
+    }
+    .group-div-img img:nth-child(2) {
+        display: block;
+        width: 250px; 
+        height: 300px;
+    }
+    .group-div-img img:nth-child(1) {
+        display: none;
+    }
+    .btn-div {
+        display: flex;
+        padding: 40px 0;
+        gap: 20px;
+    }
+    .btn {
+        width: 200px;
+        height: 35px;
+        font-size: 14px;
+    }
+}

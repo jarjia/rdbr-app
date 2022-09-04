@@ -1,3 +1,7 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(../../../../assets/HelveticaNeue.ttc);
+}
 .form-1-main {
     background-color: #F7F7F7;
     height: fit-content;
@@ -9,10 +13,6 @@
     border-radius: 10px;
     padding: 60px 75px 80px 75px;
 }
-.full-name {
-    display: flex;
-    justify-content: space-between;
-}
 .form-pages {
     padding: 40px 400px 20px 400px;
     display: flex;
@@ -20,20 +20,23 @@
     background-color: #F7F7F7;
 }
 .form {
-    padding-bottom: 5px;
-    font-family: 'Helvetica Neue';
+    padding: 0 10px 5px 10px;
+    font-family: HelveticaNeue;
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;  
     color: #232323;
 }
-
+.full-name {
+    display: flex;
+    justify-content: space-between;
+}
 .border-bottom {
     border-bottom: 2px solid black;
 }
 label {
-    font-family: sans-serif;
+    font-family: HelveticaNeue;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -69,7 +72,7 @@ label {
     width: 100%;
 }
 .small {
-    font-family: sans-serif;
+    font-family: HelveticaNeue;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -96,17 +99,17 @@ label {
     border: 2px solid blue;
 }
 .btns {
-    width: 125px;
+    width: 185px;
     height: 50px;
     background: #62A1EB;
     border-radius: 8px;
     float: right;
     border: none;
-    font-family: sans-serif;
+    font-family: HelveticaNeue;
     color: white;
     font-size: 15px;
     cursor: pointer;
-    margin: 5px;
+    margin: 5px 10px;
 }
 .btns-red {
     background-color: #E52F2F;
@@ -124,16 +127,80 @@ label {
     padding: 0 25px;
     margin: 25px 0;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: HelveticaNeue;
     -webkit-appearance: none;
     background: #EBEBEB url('../../../../assets/arrow-down.png');
     background-repeat: no-repeat;
     background-position-x: calc(100% - 25px);
     background-position-y: 25px;
 }
+.select > option {
+    border-radius: 10px;
+    font-family: HelveticaNeue;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+.select option:hover {
+    background-color: #E7F0F8;
+}
 .phone-number {
     margin: 30px 0;
 }
 .sub-res-btns {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     padding: 20px;
+}
+.button-back {
+    display: none;
+    border: none;
+    font-family: HelveticaNeue;
+    color: #62A1EB;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+@media only screen and (max-width: 425px) {
+    .form-page-1 {
+        margin: 0 20px;
+        border-radius: 10px;
+        padding: 20px 15px 40px 15px;
+    }
+    .full-name {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-pages {
+        padding: 30px 0 20px 0;
+        gap: 10px;
+        text-align: center;
+    }
+    .select-div {
+        margin: 10px 0;
+    }
+    .select {
+        margin: 10px 0;
+    }
+    .input {
+        width: 100%;
+        height: 45px;
+    }
+    .sub-res-btns {
+        justify-content: center;
+    }
+    .sub-res-btns div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0 0 0;
+    }
+    .btns {
+        float: none;
+    }
+    .button-back {
+        display: block;
+    }
 }
