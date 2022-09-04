@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/rdbr-app/static/css/main.4eac51c2.css",
-    "main.js": "/rdbr-app/static/js/main.6441491c.js",
-    "static/media/HelveticaNeue.ttc": "/rdbr-app/static/media/HelveticaNeue.67d426c3bd180e2ea838.ttc",
-    "static/media/Group 1.png": "/rdbr-app/static/media/Group 1.4997c71193b8a18ef7ae.png",
-    "static/media/Group.png": "/rdbr-app/static/media/Group.5721545f8391a64ab578.png",
-    "index.html": "/rdbr-app/index.html",
-    "main.4eac51c2.css.map": "/rdbr-app/static/css/main.4eac51c2.css.map",
-    "main.6441491c.js.map": "/rdbr-app/static/js/main.6441491c.js.map"
+    "main.css": "/my-rdbr/static/css/main.d7392fae.css",
+    "main.js": "/my-rdbr/static/js/main.37012328.js",
+    "static/media/HelveticaNeue.ttc": "/my-rdbr/static/media/HelveticaNeue.67d426c3bd180e2ea838.ttc",
+    "static/media/Group 1.png": "/my-rdbr/static/media/Group 1.4997c71193b8a18ef7ae.png",
+    "static/media/Group.png": "/my-rdbr/static/media/Group.5721545f8391a64ab578.png",
+    "index.html": "/my-rdbr/index.html",
+    "main.d7392fae.css.map": "/my-rdbr/static/css/main.d7392fae.css.map",
+    "main.37012328.js.map": "/my-rdbr/static/js/main.37012328.js.map"
   },
   "entrypoints": [
-    "static/css/main.4eac51c2.css",
-    "static/js/main.6441491c.js"
+    "static/css/main.d7392fae.css",
+    "static/js/main.37012328.js"
   ]
 }
