@@ -222,7 +222,8 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
           <Field type='text' 
             onFocus={(e) => (e.target.type = "date")}
             onBlur={(e) => (e.target.type = "text")} 
-            placeholder='დდ / თთ / წწწწ' className='input-field' name='laptop_purchase_date'
+            className='input-field' id='date-inp'
+            placeholder='დდ / თთ / წწწწ' name='laptop_purchase_date'
           />
         </div>
         <div>

@@ -288,59 +288,18 @@ input[type="radio"] {
 .warning-div-err-mob {
     display: none;
 }
-.date-picker {
-    display: inline-block;
-    background: rgba(40, 40, 250, .1);
-    min-width: 10rem;
-    min-height: 2rem;
-    padding: .5rem;
-    border-radius: .35rem;
-    position: relative;
-    isolation: isolate;
-  }
-  
-  .date-picker,
-  .date-picker>* {
-    cursor: text;
-    font-size: 1.2rem;
-  }
-  
-  .date-picker:hover {
-    background: rgba(40, 40, 250, .28);
-  }
-  
-  .date-picker:active {
-    background: rgba(40, 40, 250, .2);
-  }
-  
-  .date-picker:focus>input[type="date"],
-  .date-picker:focus-within>input[type="date"] {
-    color: #00f;
-  }
-  
-  .date-picker:focus,
-  .date-picker:focus-within {
-    box-shadow: 0 0 0 .1rem #00f;
-  }
-  .date-picker>input[type="date"] {
-    background: none;
-    border: none;
+#date-inp {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 90%;
     outline: none;
-    color: transparent;
-    font-family: serif;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 5px;
+    padding: 0.7em 0.5em;
+    font-family: Quicksand;
+    font-size: 1rem;
   }
-  
-  .date-picker>input[type="date"]:valid {
-    color: #00f !important;
-  }
-  
 @media only screen and (max-width: 425px) {
     .image-preview-div {
         height: 240px;
