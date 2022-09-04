@@ -11,7 +11,7 @@
 
 ## როგორ გამოვიყენოთ საიტი:
 
-$ git clone https://github.com/jarjia/rdbr-app.git
-$ cd my-rdbr
-$ npm install
-$ npm start
+- $ git clone https://github.com/jarjia/rdbr-app.git
+- $ cd my-rdbr
+- $ npm install
+- $ npm start
