@@ -16,7 +16,7 @@ const StartPage = () => {
           <img src={computerImg} alt='group' className='group-img'/>
         </div>
         <div className='btn-div'>
-          <Link to='/form'><button className='btn'>ᲩᲐᲜᲐᲬᲔᲠᲘᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ</button></Link>
+          <Link to='/form'><button className='btn'>ᲩᲐᲜᲐᲬᲔᲠᲘᲡ ᲓᲐᲛᲐᲢᲔᲑᲐ sadasd</button></Link>
           <Link to='/List'><button className='btn'>ᲩᲐᲜᲐᲬᲔᲠᲔᲑᲘᲡ ᲡᲘᲐ</button></Link>
         </div>
       </div>

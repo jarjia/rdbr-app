@@ -217,7 +217,7 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
         </div>
       </div>
       <div className='laptop-date-cost'>
-        <div>
+        <div className='data-picker'>
           <label htmlFor='laptop_purchase_date'>შეძენის რიცხვი (არჩევითი)</label>
           <Field type='text' 
             onFocus={(e) => (e.target.type = "date")}
