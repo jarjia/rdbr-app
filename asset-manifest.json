@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/rdbr-app/static/css/main.fe74f289.css",
-    "main.js": "/rdbr-app/static/js/main.3e06595e.js",
+    "main.css": "/rdbr-app/static/css/main.ffb33c7c.css",
+    "main.js": "/rdbr-app/static/js/main.715dd830.js",
     "static/media/HelveticaNeue.ttc": "/rdbr-app/static/media/HelveticaNeue.67d426c3bd180e2ea838.ttc",
     "static/media/Group 1.png": "/rdbr-app/static/media/Group 1.4997c71193b8a18ef7ae.png",
     "static/media/Group.png": "/rdbr-app/static/media/Group.5721545f8391a64ab578.png",
     "index.html": "/rdbr-app/index.html",
-    "main.fe74f289.css.map": "/rdbr-app/static/css/main.fe74f289.css.map",
-    "main.3e06595e.js.map": "/rdbr-app/static/js/main.3e06595e.js.map"
+    "main.ffb33c7c.css.map": "/rdbr-app/static/css/main.ffb33c7c.css.map",
+    "main.715dd830.js.map": "/rdbr-app/static/js/main.715dd830.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe74f289.css",
-    "static/js/main.3e06595e.js"
+    "static/css/main.ffb33c7c.css",
+    "static/js/main.715dd830.js"
   ]
 }
