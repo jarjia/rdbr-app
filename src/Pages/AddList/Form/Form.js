@@ -16,14 +16,17 @@ const Form = () => {
 
     useEffect(() => {
         const savedForm = JSON.parse(localStorage.getItem('react-field'))
-        if(savedForm) {
+        const savedStep = JSON.parse(localStorage.getItem('react-step-save'))
+        if(savedForm || savedStep) {
             setForm(savedForm)
+            setStep(savedStep)
         }
     }, [])
 
     useEffect(() => {
         localStorage.setItem('react-field', JSON.stringify(form))
-    }, [form])
+        localStorage.setItem('react-step-save', JSON.stringify(step))
+    }, [form, step])
 
     const handleData = (newData) => {
         setForm(prev => {

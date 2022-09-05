@@ -152,20 +152,10 @@ label {
     justify-content: space-between;
     padding: 20px;
 }
-.button-back {
-    display: none;
-    border: none;
-    font-family: HelveticaNeue;
-    color: #62A1EB;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 20px 0;
-}
 
 @media only screen and (max-width: 425px) {
     .form-page-1 {
-        margin: 0 20px;
+        margin: 0 0;
         border-radius: 10px;
         padding: 20px 15px 40px 15px;
     }
@@ -199,8 +189,5 @@ label {
     }
     .btns {
         float: none;
-    }
-    .button-back {
-        display: block;
     }
 }

@@ -62,4 +62,7 @@
     .form-pages-step-2 {
         display: block;
     }
+    .rdbr-logo {
+       display: none;
+    }
 }

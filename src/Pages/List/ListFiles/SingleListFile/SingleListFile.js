@@ -41,7 +41,7 @@ const SingleListFile = () => {
       }, [])
 
     useEffect(() => {
-        fetch(`https://pcfy.redberryinternship.ge/api/laptop/${laptopId}?token=a7fd0975265b2120d8d0db2703f20fe7`)
+        fetch(`https://pcfy.redberryinternship.ge/api/laptop/${laptopId}?token=be182ff8797b8ea53c4f04440156bb00`)
             .then(res => res.json())
             .then(data => setData(data.data))
     }, [laptopId])

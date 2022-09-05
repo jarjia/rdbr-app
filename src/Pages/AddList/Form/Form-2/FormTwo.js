@@ -133,9 +133,9 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
       {image !== undefined && <div className='img-file'>
           <div>
             <img src={tick} alt='done file'/>
-            <div>
-              <span>{fileName}</span>
-              <span className='size'>{size}</span>
+            <div className='file-propertys'>
+              <div className='file-name'>{fileName}</div>
+              <div className='size'>{size}</div>
             </div>
           </div>
           <label className='upload-again' htmlFor='file-upload'>თავიდან ატვირთე</label>
@@ -191,7 +191,7 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
       </div>
       <div className='laptop-ram-storage'>
         <div>
-        <label htmlFor='laptop_ram' className={errors.laptop_ram && touched.laptop_ram && 'label-red'}>CPU-ს ნაკადი</label>
+        <label htmlFor='laptop_ram' className={errors.laptop_ram && touched.laptop_ram && 'label-red'}>ლეპტოპის RAM (GB)</label>
           <Field type='number' name='laptop_ram' className={`${errors.laptop_ram && touched.laptop_ram ? 'input-field-red' : 'input-field'}`}  autoCorrect='off' placeholder='365'/>
           <small className={`small ${errors.laptop_ram && touched.laptop_ram && 'small-red'}`}>
             {errors.laptop_ram && touched.laptop_ram ? errors.laptop_ram : 'მხოლოდ ციფრები'}
@@ -222,7 +222,7 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
           <Field type='text' 
             onFocus={(e) => (e.target.type = "date")}
             onBlur={(e) => (e.target.type = "text")} 
-            className='input-field' id='date-inp'
+            className='input-field'
             placeholder='დდ / თთ / წწწწ' name='laptop_purchase_date'
           />
         </div>
@@ -273,18 +273,22 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
 const FormTwo = ({form, handleStepNext, handleStepBack}) => {
   const [initialValues, handleUpdateForm] = useLocalStorageState({ key: LOCAL_STORAGE_KEY, value: INITIAL_VALUES });
   
-  const token = 'a7fd0975265b2120d8d0db2703f20fe7';
+  const token = 'be182ff8797b8ea53c4f04440156bb00';
 
   const createLaptop = async (data) => {
-    await axios.post('https://pcfy.redberryinternship.ge/api/laptop/create', 
-      data,
-      {}
-    ).then(res => {
-      if(res.status === 200) {
-        handleStepNext()
-        localStorage.clear()
-      }
-    })
+    try {
+      await axios.post('https://pcfy.redberryinternship.ge/api/laptop/create', 
+        data,
+        {}
+      ).then(res => {
+        if(res.status === 200) {
+          handleStepNext()
+          localStorage.clear()
+        }
+      })
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const handleSubmit = (values) => {

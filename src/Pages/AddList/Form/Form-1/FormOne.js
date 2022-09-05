@@ -84,7 +84,9 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
             </div>
         </div>
         <div className='select-div'>
-            <Field as='select' name='team_id' className='select'>
+            <Field as='select' name='team_id' className='select' style={{
+                border: errors.position_id && touched.position_id && '2px solid #E52F2F'
+            }}>
                 <option value=''>თიმი</option>
                 {teams.map(item => {
                     return <option key={item.id} value={item.id}>{item.name}</option>
@@ -114,7 +116,7 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
         </div>
         <div className='email'>
             <label htmlFor='email' className={`${errors.email && touched.email && 'label-red'}`}>მეილი</label>
-            <Field type='email' name='email' className={`input long ${errors.email && touched.email && 'input-red'}`} placeholder='მისამართი@redberry.ge' autoComplete='off'/>
+            <Field type='email' name='email' className={`input long ${errors.email && touched.email && 'input-red'}`} placeholder='მისამართი@redberry.ge' autoComplete='off' formNoValidate/>
             <small className={`small ${errors.email && touched.email && 'small-red'}`}>
                 {`${errors.email && touched.email ? errors.email : 'უნდა მთავრდებოდეს @redberry.ge-ით'}`}
             </small>
@@ -130,7 +132,6 @@ const MyForm = ({handleStepBack, errors, touched, saveForm, ...props }) => {
             <div>
                 <button className='btns' type='submit'>შემდეგი</button>
                 <button className='btns btns-red' type='reset' onClick={handleReset}>წაშლა</button>
-                <button className='button-back' onClick={handleStepBack}>უკან</button>
             </div>
         </div>
      </Form>

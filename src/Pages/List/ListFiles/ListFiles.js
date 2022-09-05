@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom'
 
 const ListFiles = () => {
   const [data, setData] = useState([]) 
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
-    fetch('https://pcfy.redberryinternship.ge/api/laptops?token=a7fd0975265b2120d8d0db2703f20fe7')
+    fetch('https://pcfy.redberryinternship.ge/api/laptops?token=be182ff8797b8ea53c4f04440156bb00')
       .then(res => res.json())
       .then(data => setData(data.data))
       .catch(err => console.log(err))
@@ -24,8 +25,21 @@ const ListFiles = () => {
               <h1>ᲩᲐᲜᲐᲬᲔᲠᲔᲑᲘᲡ ᲡᲘᲐ</h1>
             </div>
           </div>
+          {data.length > 0 && <div className='input-search'>
+            <input type='text' value={search} onChange={e => setSearch(e.target.value)} className='search' maxLength={40} placeholder='იპოვე ლეპტოპი სახელით...' />
+            <img src='https://static.vecteezy.com/system/resources/previews/005/487/432/original/clipart-icon-lupe-loop-search-free-vector.jpg' className='search-loop' alt='loop' draggable="false"/>
+          </div>}
           {data.length !== 0 ? <div className='lists'>
-            {data.map(item => {
+            {data.filter(prev => {
+              let fullName = `${prev.user.name} ${prev.user.surname}`
+              if(search === '') {
+                return prev
+              }else if(fullName.toLowerCase().includes(search.toLowerCase())) {
+                return prev
+              }else {
+                return null
+              }
+            }).map(item => {
               return <div className='list' key={item.laptop.id}>
                 <div className='list-img'>
                   <img src={`https://pcfy.redberryinternship.ge/${item.laptop.image}`} alt='laptop'/>

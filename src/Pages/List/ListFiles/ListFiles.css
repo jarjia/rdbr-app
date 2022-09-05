@@ -18,6 +18,7 @@
 }
 .header {
     display: flex;
+    padding: 40px 0;
 }
 .header div:nth-child(2) {
     align-self: center;
@@ -94,13 +95,37 @@
 }
 .empty-div {
     position: absolute;
-    top: 35%;
-    left: 36%;
+    top: 45%;
+    left: 37%;
+}
+.input-search {
+    padding: 20px;
+    text-align: center;
+}
+.search {
+    outline: none;
+    position: relative;
+    left: 40px;
+    margin: auto;
+    width: 100%;
+    max-width: 380px;
+    height: 53px;
+    padding-left: 10px;
+    font-size: 12pt;
+    border: 1px solid black;
+}
+.search-loop {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    user-select: none;
 }
 
 @media only screen and (max-width: 425px) {
     .list-wrapper {
-        padding: 50px 15px;
+        padding: 25px 15px;
     }
     .list-wrapper h1 {
         font-weight: 500;
@@ -139,7 +164,19 @@
     }
     .empty-div {
         position: absolute;
-        top: 20%;
+        top: 50%;
         left: 11%;
+    }
+    .input-search {
+        padding: 0;
+        position: relative;
+        top: 40px;
+    }
+    .search {
+        left: 0;
+        max-width: 250px;
+    }
+    .search-loop {
+        display: none;
     }
 }

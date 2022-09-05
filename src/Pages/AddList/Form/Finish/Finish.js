@@ -4,6 +4,10 @@ import './Finish.css'
 
 const Finish = () => {
 
+  const handleClear = () => {
+    localStorage.clear()
+  }
+
   return (
     <div className='finish-main'>
         <div className='finish-wrapper'>
@@ -12,8 +16,8 @@ const Finish = () => {
                 <h2>ჩანაწერი დამატებულია!</h2>
             </div>
             <div className='finish-2'>
-                <Link to='/list'><button className='see-list'>სიაში გადაყვანა</button></Link>
-                <Link to='/' className='home-link'>მთავარი</Link>
+                <Link to='/list'><button className='see-list' onClick={handleClear}>სიაში გადაყვანა</button></Link>
+                <Link to='/' className='home-link'><button onClick={handleClear} className='home-link'>მთავარი</button></Link>
             </div>
         </div>
     </div>

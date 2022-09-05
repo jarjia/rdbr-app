@@ -33,20 +33,32 @@
 }
 .img-file div {
     display: flex;
+    align-self: center;
+}
+.file-propertys {
+    display: flex;
+    flex-direction: column;
 }
 .img-file div img {
     width: 20px;
     height: 20px;
     align-self: center;
 }
+.img-file div .file-name {
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 260px; 
+    height: 1.2em; 
+    white-space: nowrap;
+}
 .img-file div .size {
     font-size: 14px;
     color: #5F5F5F;
     font-family: sans-serif;
 }
-.img-file div span {
+.img-file div div {
     margin: 0 10px;
-    align-self: center;
+    align-self: flex-start;
     font-family: HelveticaNeue;
     font-style: normal;
     font-weight: 400;
@@ -288,18 +300,16 @@ input[type="radio"] {
 .warning-div-err-mob {
     display: none;
 }
-#date-inp {
-    display: block;
-    margin: 0 auto;
-    margin-top: 1em;
-    width: 90%;
-    outline: none;
+.button-back {
+    display: none;
     border: none;
-    border-radius: 5px;
-    padding: 0.7em 0.5em;
-    font-family: Quicksand;
-    font-size: 1rem;
-  }
+    font-family: HelveticaNeue;
+    color: #62A1EB;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 20px 0;
+}
 @media only screen and (max-width: 425px) {
     .image-preview-div {
         height: 240px;
@@ -398,5 +408,8 @@ input[type="radio"] {
     }
     .mob-camera {
         display: block;
+    }
+    .img-file div .file-name {
+        width: 100px; 
     }
 }

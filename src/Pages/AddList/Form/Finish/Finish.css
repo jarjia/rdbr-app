@@ -63,6 +63,9 @@
     font-weight: 500;
     line-height: 24px;
     color: #0089A7;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 425px) {
